@@ -1,0 +1,169 @@
+:root {
+    /* --cl_background: rgb(221, 221, 221); */
+    --cl_background: rgb(36, 36, 36);
+    --cl_primary: #FF416F;
+    --cl_secondary_01: #D69406;
+    --cl_secondary_02: #2FED05;
+    --cl_secondary_03: #0688D6;
+    --cl_secondary_04: #D507FA;
+    --cl_dark_01: #212121;
+    --cl_dark_02: #2121216e;
+}
+
+body {
+    background: var(--cl_background);
+}
+
+.menu {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background: purple;
+}
+
+.menu--icon {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    bottom: 16px;
+    right: 16px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu--icon:hover {
+    animation: hover_icon_menu 0.5s linear;
+}
+
+@keyframes hover_icon_menu {
+    30%{
+        transform: rotateZ(30deg);
+    }
+    60%{
+        transform: rotateZ(-30deg);
+    }
+    80%{
+        transform: rotateZ(20deg);
+    }
+}
+
+.menu--icon-view {
+    width: 20px;
+    height: 4px;
+    background: var(--cl_dark_02);
+    position: relative;
+}
+
+.menu--icon-view::after, .menu--icon-view::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    background: var(--cl_dark_01);
+}
+
+.menu--icon-view::after {
+    top: -8px;
+    border-radius: 50% 50% 0px 0px;
+}
+
+.menu--icon-view::before {
+    top: 8px;
+    border-radius: 0px 0px 50% 50%;
+}
+.menu--menu,
+.menu--menu::after {
+    width: 80vw;
+    height: 80vw;
+
+    animation: open_menu 0.3s linear;
+}
+@keyframes open_menu {
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+}
+@keyframes close_menu {
+    100%{
+        width: 0px;
+        height: 0px;
+    }
+}
+.menu--menu {
+    position: absolute;
+    bottom: 50%;
+    right: 16px;
+    background: white;
+    clip-path: circle(95% at 100% 100%);
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: " . . . about" " . . colaboration ." " . portfolio . ." " home . . .";
+}
+
+.menu--menu::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: var(--cl_background);
+    clip-path: circle(55% at 100% 100%);
+}
+
+.menu--menu-option {
+    padding: 0px;
+    list-style-type: none;
+    display: block;
+    align-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.menu--menu-option:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 0px 2px var(--cl_background);
+}
+
+.menu--menu-option img {
+    width: 25px;
+    display: block;
+    margin: 5px auto;
+}
+
+.menu--menu-option span {
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+}
+
+.menu--menu-option:nth-child(1) {
+    grid-area: home;
+    margin: auto 0px auto auto;
+}
+
+.menu--menu-option:nth-child(2) {
+    grid-area: colaboration;
+    margin: 0px auto auto 0px;
+}
+
+.menu--menu-option:nth-child(3) {
+    grid-area: portfolio;
+    margin: 0px auto auto 0px;
+}
+
+.menu--menu-option:nth-child(4) {
+    grid-area: about;
+    margin: auto auto 0px auto;
+}
+
+@media screen and (min-width:767px) {
+    .menu--menu,
+    .menu--menu::after {
+        width: 400px;
+        height: 400px;
+    }
+}
