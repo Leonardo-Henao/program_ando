@@ -1,0 +1,154 @@
+:root {
+    --cl-background: rgb(236, 236, 236);
+    --cl-primary: rgb(25, 25, 25);
+    --cl-secondary: rgb(50, 50, 50);
+}
+
+body {
+    background: var(--cl-background);
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    transition: all 1s ease-in-out;
+}
+
+header::after, header::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 0%;
+}
+
+header::after {
+    top: 0px;
+    background: linear-gradient(140deg, var(--cl-primary), var(--cl-secondary));
+    animation: after_open 1s linear;
+    transform: translateY(-110%);
+}
+
+header::before {
+    bottom: 0px;
+    background: linear-gradient(45deg, var(--cl-primary), var(--cl-secondary));
+    animation: before_open 1s linear;
+    transform: translateY(110%);
+}
+
+/* HEADER BRAND */
+
+.header_brand {
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_brand-logo {
+    width: 100px;
+    margin: 5px 10px;
+    transition: all 0.5s ease;
+}
+
+.header_brand-name {
+    font-size: 2.5rem;
+    color: var(--cl-primary);
+    text-shadow: 0px 0px 2px var(--cl-primary);
+    animation: changed_text_open 0.8s linear;
+    transition: all 0.5s ease;
+}
+
+/* HEADER NAV */
+
+.nav_primary {
+    display: none;
+    animation: slide_enter 0.5s linear;
+}
+
+.nav_primary--menu {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: end;
+}
+
+.nav_primary--items {
+    list-style-type: none;
+    margin: 5px;
+    text-transform: capitalize;
+}
+
+.nav_primary--items a {
+    color: gray;
+    text-decoration: none;
+}
+
+/* SECTION- PARRAFO */
+
+section{
+    margin-top: 50px;
+}
+.parrafo{
+    border-radius: 10px;
+    margin: 10px 50px;
+    padding: 15px;
+    background: white;
+    display: grid;
+    grid-template-columns: 100px 2fr;
+    grid-template-areas: 
+    "p_img p_title"
+    "p_img p_msj";
+    gap: 10px;
+    align-items: center;
+}
+
+.parrafo--img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    grid-area: p_img;
+}
+.parrafo--title{
+    font-size: 1.1rem;
+    font-weight: bold;
+    grid-area: p_title;
+}
+.parrafo--msj{
+    color: gray;
+    grid-area: p_msj;
+}
+
+@keyframes after_open {
+    0% {
+        transform: translateY(0%);
+        height: 50vh;
+    }
+}
+
+@keyframes before_open {
+    0% {
+        transform: translateY(0%);
+        height: 50vh;
+    }
+}
+
+@keyframes changed_text_open {
+    0% {
+        color: white;
+        text-shadow: 0px 0px 2px white;
+    }
+}
+
+@keyframes slide_enter{
+    0%{
+        transform: translateX(110%);
+    }
+}
