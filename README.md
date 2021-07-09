@@ -14,17 +14,38 @@ puedes ir a la página [DownGit](https://minhaskamal.github.io/DownGit/#/home)
 donde simplemente con pegar la url de la carpeta 
 se te descargara inmediatamente un zip con los archivos
 
-## Más sobre mi
+## Estado de cada proyecto
+
+- **Proceso**: Proyecto no terminado.
+- **Terminado**: Proyecto ya finalizado.
+- **Actualizado**: Proyecto actualizado en el cual
+ se mejoraron cosas, codigo o se agregaron funciones.
+
+## Más sobre mi 🐱
 
 Mi nombre es Leonardo Henao, soy de Colombia y soy
 un apasionado por la tecnología y la 
-programación en especial
+programación en especial.
 
-### Mis redes
+Manejo lenguajes como Javascript, PHP, Kotlin, Python; 
+bases de datos en Mysql y lenguajes de etiquetado
+__(para evitar discusiones)__ como HTML y CSS. 
 
-- Instagram **EN ESPECIAL**
+No soy muy amante de los framewords.
 
-## Apoyo
+## Síguenos en 👬👭
+
+- Instagram **EN ESPECIAL** [Program_ando](https://instagram.com/program_ando)
+- Youtube [Program_ndo](https://youtube.com/c/Programando_ando)
+- Algunas de mis apps [Play Store](https://play.google.com/store/apps/dev?id=7404460400144886326)
+
+### En Colombia 🇨🇴
+
+- Si eres mujer y te gusta comprar maquullaje y 
+  accesorios que te hacen ver mas guapa!
+  [Tu Colmena Virtual](https://tucolmenavirtual.com)
+
+## Apoyo 😏😁
 
 Crear sitios web o todo este contenido requiere
 un poco de tiempo y energía, agradezco a quienes
@@ -41,4 +62,4 @@ humilde servidor 😁😁
 - Shiba Inu
   0x1ee27e8097690b3fa3920458c425010c7a413a30
 
-😌😌 Gracias por leerme, por seguir mir proyectos y por apoyarme!
+😌😌 Gracias por leerme, por seguir mis proyectos y por apoyarme!
