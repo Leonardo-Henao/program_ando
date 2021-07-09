@@ -11,7 +11,7 @@ function open_page(){
         let interval_p = setInterval(() => {
             list_p[pos].style.animation = 'slide_enter 0.5s linear'
             pos++
-            if(pos > list_p.length) clearInterval(interval_p)
+            if(pos > list_p.length -1) clearInterval(interval_p)
         }, 200);
         
         setTimeout(() => {

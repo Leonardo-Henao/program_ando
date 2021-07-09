@@ -1,8 +1,7 @@
 :root {
-    /* --cl_background: rgb(221, 221, 221); */
     --cl_background: rgb(36, 36, 36);
     --cl_primary: #FF416F;
-    --cl_secondary_01: #D69406;
+    --cl_secondary_01: #7a766c;
     --cl_secondary_02: #2FED05;
     --cl_secondary_03: #0688D6;
     --cl_secondary_04: #D507FA;
@@ -12,8 +11,26 @@
 
 body {
     background: var(--cl_background);
+    margin: 0px;
 }
 
+header{
+    background: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+.header--title{
+    display: block;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--cl_dark_01);
+    text-shadow: 0px 0px 3px var(--cl_dark_01);
+}
+.header--info{
+    color: gray;
+    font-size: 0.8rem;
+    margin: 5px 0px;
+}
 .menu {
     position: fixed;
     bottom: 0px;
@@ -37,18 +54,6 @@ body {
 
 .menu--icon:hover {
     animation: hover_icon_menu 0.5s linear;
-}
-
-@keyframes hover_icon_menu {
-    30%{
-        transform: rotateZ(30deg);
-    }
-    60%{
-        transform: rotateZ(-30deg);
-    }
-    80%{
-        transform: rotateZ(20deg);
-    }
 }
 
 .menu--icon-view {
@@ -79,21 +84,11 @@ body {
 .menu--menu::after {
     width: 80vw;
     height: 80vw;
+    overflow: hidden;
 
     animation: open_menu 0.3s linear;
 }
-@keyframes open_menu {
-    0%{
-        width: 0px;
-        height: 0px;
-    }
-}
-@keyframes close_menu {
-    100%{
-        width: 0px;
-        height: 0px;
-    }
-}
+
 .menu--menu {
     position: absolute;
     bottom: 50%;
@@ -121,11 +116,12 @@ body {
     display: block;
     align-content: center;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 .menu--menu-option:hover {
-    transform: scale(1.1);
-    text-shadow: 0px 0px 2px var(--cl_background);
+    transform: scale(1.05);
+    transform-origin: bottom;
+    animation: hover_icon_menu 0.3s linear;
 }
 
 .menu--menu-option img {
@@ -138,26 +134,55 @@ body {
     text-transform: capitalize;
     text-align: center;
     display: block;
+    font-size: 0.8rem;
 }
 
 .menu--menu-option:nth-child(1) {
     grid-area: home;
     margin: auto 0px auto auto;
+    color: var(--cl_secondary_01);
 }
 
 .menu--menu-option:nth-child(2) {
     grid-area: colaboration;
     margin: 0px auto auto 0px;
+    color: var(--cl_secondary_02);
 }
 
 .menu--menu-option:nth-child(3) {
     grid-area: portfolio;
     margin: 0px auto auto 0px;
+    color: var(--cl_secondary_03);
 }
 
 .menu--menu-option:nth-child(4) {
     grid-area: about;
     margin: auto auto 0px auto;
+    color: var(--cl_secondary_04);
+}
+@keyframes hover_icon_menu {
+    30%{
+        transform: rotateZ(30deg);
+    }
+    60%{
+        transform: rotateZ(-30deg);
+    }
+    80%{
+        transform: rotateZ(20deg);
+    }
+}
+
+@keyframes open_menu {
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+}
+@keyframes close_menu {
+    100%{
+        width: 0px;
+        height: 0px;
+    }
 }
 
 @media screen and (min-width:767px) {
@@ -165,5 +190,8 @@ body {
     .menu--menu::after {
         width: 400px;
         height: 400px;
+    }
+    .menu--menu-option span {
+        font-size: 1rem;
     }
 }
