@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form style 01 - @program_ando</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section>
+
+        <form action="javascript:send_form()" method="post">
+            <span class="form_title">Customer login</span>
+            <label for="input_user">
+                <img src="/assets/bxs-user.svg" alt="icon user">
+                <input type="text" name="input_user" id="input_user" placeholder="Username">
+            </label>
+            <label for="input_password">
+                <img src="/assets/security.svg" alt="icon security">
+                <input type="password" name="input_password" id="input_password" placeholder="Password">
+            </label>
+            <button class="form_button-submit" type="submit" onmouseover="hover()" onmouseout="hover_out()">
+                Sign In
+                <img class="form_button-submit--img" src="/assets/arrow-right.svg" alt="icon next">
+            </button>
+            <div class="form_login_info">
+                <a href="#">Privacy Policies</a>
+                <a href="#">Forgotten password</a>
+            </div>
+        </form>
+
+    </section>
+
+    <!-- Photo of background page by Elizaveta Dushechkina from Pexels -->
+
+    <script src="main.js"></script>
+</body>
+
+</html>

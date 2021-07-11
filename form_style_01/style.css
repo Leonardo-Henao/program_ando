@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root{
+    --cl_bg_form: #578c5657;
+    --cl_secondary_01: #578C56;
+    --cl_secondary_03: #73261F;
+}
+
+html*{
+    padding: 0px;
+    margin: 0px;
+}
+body::before{
+    content: '';
+
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+
+    background-image:url('/assets/bg/pexels-elizaveta-dushechkina-4385304.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 95vh;
+}
+
+form{
+    display: block;
+    margin: 30px;
+    background: var(--cl_bg_form);
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px black;
+}
+
+.form_title{
+    color: black;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 30px;
+    display: block;
+    text-align: center;
+}
+
+form label{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+form label img{
+    margin: 2px;
+    background: var(--cl_secondary_01);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+form input[type=text],
+form input[type=password] {
+    background: white;
+    color: var(--cl_secondary_03);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 0.9rem;
+
+    transition: all 0.5s ease-in-out;
+}
+form input[type=text]:focus,
+form input[type=password]:focus {
+    border-width: 1px;
+    border-style: groove;
+    border-color: var(--cl_secondary_03);
+    box-shadow: 0px 0px 2px var(--cl_secondary_03) ;
+    outline: 0 none;
+}
+button[type=submit] {
+    display: flex;
+    background: var(--cl_secondary_01);
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 2px;
+    margin: auto 10px 0px auto;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s ease;
+}
+button[type=submit]:hover{
+    box-shadow: 0px 0px 10px var(--cl_secondary_01);
+}
+button[type=submit] img{
+    width: 0px;
+    transition: all 0.2s ease-in-out;
+}
+.form_login_info{
+    display: flex;
+    justify-content: center;
+}
+.form_login_info a{
+    font-size: 0.7rem;
+    margin: 20px 5px 5px 5px;
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 5px black;
+}

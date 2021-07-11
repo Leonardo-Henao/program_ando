@@ -1,6 +1,5 @@
 :root {
     --cl_background: rgb(36, 36, 36);
-    --cl_primary: #FF416F;
     --cl_secondary_01: #7a766c;
     --cl_secondary_02: #2FED05;
     --cl_secondary_03: #0688D6;
@@ -31,6 +30,7 @@ header{
     font-size: 0.8rem;
     margin: 5px 0px;
 }
+
 .menu {
     position: fixed;
     bottom: 0px;
@@ -80,6 +80,7 @@ header{
     top: 8px;
     border-radius: 0px 0px 50% 50%;
 }
+
 .menu--menu,
 .menu--menu::after {
     width: 80vw;
